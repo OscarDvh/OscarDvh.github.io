@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Footer from '../sections/Footer.astro';
+import Info from '../sections/Info.astro';
+import Main from '../sections/Main.astro';
+import Mix from '../sections/Mix.astro';
+
+---
+
+<Layout title="Bajotierra">
+	<main class="snap-y snap-mandatory relative w-full h-screen overflow-auto">
+		<div class="snap-center">
+			<Main/>
+		</div>
+		<div class="snap-center">
+			<Mix/>
+		</div>
+		<div class="snap-center">
+			<Info/>
+		</div>		
+		<div class="snap-center">
+			<Footer/>
+		</div>	
+	</main>
+</Layout>
+
