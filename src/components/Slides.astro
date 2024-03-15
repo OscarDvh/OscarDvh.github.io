@@ -1,0 +1,106 @@
+<div class="carrousel">
+        <!-- SLIDE 1 -->
+        <div class="slide1">
+            <div class="carousel-item">
+                <section class="slider-section">
+                    <section class="bg-black h-screen w-screen text-center relative ">
+                        <div class="absolute top-0 bottom-0 w-full h-full">
+                        <video autoplay muted loop src="/dani2.webm" class="w-full h-full object-cover animate-blurred-fade-in"></video>
+                        </div>
+
+                        <section class="flex flex-col justify-start items-start absolute">
+                            <img src="align-justify.png" class="pt-5 pl-10 animate-fade-in">
+                        </section>
+
+                        <section class="flex flex-col justify-center items-center absolute  left-0 w-full h-full">
+                            <div class="logo-container ">
+                            <img src="/LogoBT2.png" class="w-96 h-96 animate-fade-in">
+                            </div>
+                        </section>
+                        <button onclick="nextSlide()">
+                            <section class="absolute bottom-0 right-0 mr-10 mb-4 ml-3 animate-fade-in">
+                                <img src="arrow-circle-right.png" class="" alt="">
+                            </section>
+                        </button>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+
+        <!-- SLIDE 2 -->
+        <div class="slide2">
+            <div class="carousel-item">
+                <section class="slider-section">
+                    <section class="bg-black h-screen w-screen text-center relative ">
+                        <div class="absolute top-0 bottom-0 w-full h-full">
+                        <video autoplay muted loop src="/bg1.jpg" class="w-full h-full object-cover animate-blurred-fade-in"></video>
+                        </div>
+
+                        <section class="flex flex-col justify-start items-start absolute">
+                            <img src="align-justify.png" class="pt-5 pl-10 animate-fade-in">
+                        </section>
+
+                        <section class="flex flex-col justify-center items-center absolute  left-0 w-full h-full">
+                            <div class="logo-container ">
+                            <img src="/LogoBT2.png" class="w-96 h-96 animate-fade-in">
+                            </div>
+                        </section>
+                        <button onclick="nextSlide()">
+                            <section class="absolute bottom-0 right-0 mr-10 mb-4 ml-3 animate-fade-in">
+                                <img src="arrow-circle-right.png" class="" alt="">
+                            </section>
+                        </button>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide3">
+            <div class="carousel-item">
+                <section class="slider-section">
+                    <section class="bg-black h-screen w-screen text-center relative ">
+                        <div class="absolute top-0 bottom-0 w-full h-full">
+                        <video autoplay muted loop src="/bg2.jpg" class="w-full h-full object-cover animate-blurred-fade-in"></video>
+                        </div>
+
+                        <section class="flex flex-col justify-start items-start absolute">
+                            <img src="align-justify.png" class="pt-5 pl-10 animate-fade-in">
+                        </section>
+
+                        <section class="flex flex-col justify-center items-center absolute  left-0 w-full h-full">
+                            <div class="logo-container ">
+                            <img src="/LogoBT2.png" class="w-96 h-96 animate-fade-in">
+                            </div>
+                        </section>
+                        <button onclick="nextSlide()">
+                            <section class="absolute bottom-0 right-0 mr-10 mb-4 ml-3 animate-fade-in">
+                                <img src="arrow-circle-right.png" class="" alt="">
+                            </section>
+                        </button>
+                    </section>
+                </section>
+            </div>
+        </div>
+</div>
+
+
+<script>
+    let currentSlide = 0; // Variable para mantener el seguimiento del slide actual
+
+    // Función para avanzar al siguiente slide
+    function nextSlide() {
+        const slides = document.querySelectorAll('.container-carousel');
+        const totalSlides = slides.length;
+
+        // Oculta el slide actual
+        (slides[currentSlide] as HTMLElement).style.display = 'none';
+
+        // Avanza al siguiente slide
+        currentSlide = (currentSlide + 1) % totalSlides;
+
+        // Muestra el nuevo slide
+        (slides[currentSlide] as HTMLElement).style.display = 'block';
+    }
+</script>
