@@ -34,48 +34,45 @@
 </div>
 
 <script>
+    // Llamamos a changePicture cada 5 segundos (5000 milisegundos)
+    var intervalId = setInterval(changePicture, 5000);
+
+    // Detenemos el carrusel automático cuando el usuario hace clic en el botón
     document.getElementById('botonDER').addEventListener('click', () => {
-        changePicture()
+        clearInterval(intervalId);
+        changePicture();
     });
 
     function changePicture() {
-        
         var oldtagVideo = document.getElementById('videoPagina');
-        if(oldtagVideo != null){
-        
+        if (oldtagVideo != null) {
             var newTag = document.createElement('img');
-            newTag.src='bg1.jpg';
+            newTag.src = 'bg1.jpg';
             newTag.setAttribute("id", "imagenbanner");
-            newTag.classList.add('w-full','h-full','object-cover','animate-blurred-fade-in');
+            newTag.classList.add('w-full', 'h-full', 'object-cover', 'animate-blurred-fade-in');
             oldtagVideo.parentNode.replaceChild(newTag, oldtagVideo);
-
-        }  else {
+        } else {
             var imgtag = document.getElementById('imagenbanner');
             var srcImage = imgtag.src;
             var foto = srcImage.replace(/^.*[\\\/]/, '');
-            console.log(foto);
             if (foto == 'bg1.jpg') {
-                    var newTag = document.createElement('img');
-            newTag.src='bg2.jpg';
-            newTag.setAttribute("id", "imagenbanner");
-            newTag.classList.add('w-full','h-full','object-cover','animate-blurred-fade-in');
-            imgtag.parentNode.replaceChild(newTag, imgtag);
+                var newTag = document.createElement('img');
+                newTag.src = 'bg2.jpg';
+                newTag.setAttribute("id", "imagenbanner");
+                newTag.classList.add('w-full', 'h-full', 'object-cover', 'animate-blurred-fade-in');
+                imgtag.parentNode.replaceChild(newTag, imgtag);
             }
-
-            
             if (foto == 'bg2.jpg') {
                 var newVideoTag = document.createElement('video');
-                newVideoTag.src='dani2.webm';
+                newVideoTag.src = '/dani2.webm'; // Aquí es importante incluir la ruta correcta del archivo de video
                 newVideoTag.setAttribute("id", "videoPagina");
                 newVideoTag.setAttribute("autoplay", "");
                 newVideoTag.setAttribute("muted", "");
                 newVideoTag.setAttribute("loop", "");
-                newVideoTag.setAttribute("src", "/dani2.webm");
                 newVideoTag.setAttribute("class", "w-full h-full object-cover animate-blurred-fade-in");
                 imgtag.parentNode.replaceChild(newVideoTag, imgtag);
             }
         }
     }
-    
 </script>
 
