@@ -1,16 +1,16 @@
-<section class="w-screen h-screen bg-brownb">
-<div class="flex  h-screen" >
-    <div class="w-3/5"> <!-- IZQ -->
+<section class="w-screen  ">
+<div class="flex flex-col md:flex-row sm:flex-row-reverse" >
+    <div class="bg-gradient-to-r from-pink-300 via-purple-300 to-blue-300 background-animate md:w-3/5"> <!-- IZQ -->
         <div class="flex px-10 pt-10  ">
             <img height="531" width="531" class=" m-auto  shadow-xl" src="MixMarzo.jpg" alt="portada">
         </div>
-        <div class="flex gap-96 justify-center">
+        <div class="flex gap-40 md:gap-96 justify-center ">
             <img class="" src="chevron-left.png"> 
             <img class="" src="chevron-right.png">
         </div>
     </div>
-    
-    <div class="bg-white w-2/5 h-screen"> <!-- DER -->
+     
+    <div class="bg-white md:w-2/5"> <!-- DER -->
         <a href="">
             <h1 class="text-2xl p-5 border-b-2">001 MIX MARZO BAJOTIERRA</h1>
         </a>    
@@ -117,6 +117,25 @@
         </div>
     </div>
     </div> 
-</div>x
+</div>
 </section>
 
+<style>
+	.background-animate {
+	  background-size: 400%;
+  
+	  -webkit-animation: AnimationName 3s ease infinite;
+	  -moz-animation: AnimationName 3s ease infinite;
+	  animation: AnimationName 3s ease infinite;
+	}
+  
+	@keyframes AnimationName {
+	  0%,
+	  100% {
+		background-position: 0% 50%;
+	  }
+	  50% {
+		background-position: 100% 50%;
+	  }
+	}
+  </style>
